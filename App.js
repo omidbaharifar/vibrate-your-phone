@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { Button, View, Vibration } from "react-native";
 
-export default function App() {
+const App = () => {
+  const [isVibratorOn, setIsVibratorOn] = useState(false);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Button
+        onPress={() => {
+          setIsVibratorOn(!isVibratorOn);
+          isVibratorOn ? Vibration.vibrate([1000], true) : Vibration.cancel();
+        }}
+        title={isVibratorOn ? "خاکوش" : "روشن"}
+      />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
