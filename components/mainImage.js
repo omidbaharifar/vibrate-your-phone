@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { View, StyleSheet, Image, Animated } from "react-native";
+import { StyleSheet, Image, Animated } from "react-native";
 
 const MainImage = ({ isVibratorOn }) => {
   const rawSpinValue = useRef(new Animated.Value(-5)).current;
