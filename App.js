@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Button, View, Vibration, StyleSheet } from "react-native";
+import { View, Vibration, StyleSheet, Platform } from "react-native";
 import PowerButton from "./components/powerButton";
 import MainImage from "./components/mainImage";
 
 const App = () => {
   const [isVibratorOn, setIsVibratorOn] = useState(false);
+
   useEffect(() => {
-    isVibratorOn ? Vibration.vibrate([1000], true) : Vibration.cancel();
+    isVibratorOn
+      ? Vibration.vibrate(Platform.OS === "android" ? [0, 10000] : [1000], true)
+      : Vibration.cancel();
   }, [isVibratorOn]);
 
   return (
