@@ -21,9 +21,6 @@
         "backgroundColor": "#000"
       },
       "permissions": ["VIBRATE"]
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
