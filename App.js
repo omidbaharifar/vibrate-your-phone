@@ -11,7 +11,7 @@ const App = () => {
           setIsVibratorOn(!isVibratorOn);
           isVibratorOn ? Vibration.vibrate([1000], true) : Vibration.cancel();
         }}
-        title={isVibratorOn ? "خاکوش" : "روشن"}
+        title={isVibratorOn ? "خاموش" : "روشن"}
       />
     </View>
   );
