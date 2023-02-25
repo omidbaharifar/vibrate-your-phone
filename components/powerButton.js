@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     color: "#ff9800",
   },
   icon__vibratorIsOn: {
-    color: "#fff",
+    color: "#000",
   },
 });
 
