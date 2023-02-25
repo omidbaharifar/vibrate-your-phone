@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "firstReactNativeProject",
-    "slug": "firstReactNativeProject",
+    "name": "vibrate",
+    "slug": "vibrate",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, View, Vibration } from "react-native";
+import PowerButton from "./components/powerButton";
 
 const App = () => {
   const [isVibratorOn, setIsVibratorOn] = useState(false);
@@ -9,12 +10,14 @@ const App = () => {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Button
-        onPress={() => {
-          setIsVibratorOn(!isVibratorOn);
-        }}
-        title={isVibratorOn ? "خاموش" : "روشن"}
-      />
+      <View>
+        <PowerButton
+          onPress={() => {
+            setIsVibratorOn(!isVibratorOn);
+          }}
+          isVibratorOn={isVibratorOn}
+        />
+      </View>
     </View>
   );
 };
